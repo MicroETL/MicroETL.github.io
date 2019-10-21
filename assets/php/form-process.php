@@ -32,7 +32,7 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "email@gmail.com";
+$EmailTo = "";
 $Subject = "New Message Received";
 
 // prepare email body text
@@ -43,15 +43,16 @@ $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "Subject: ";
-$Body .= $msg_subject;
-$Body .= "\n";
-$Body .= "Message: ";
-$Body .= $message;
-$Body .= "\n";
+// $Body .= "Subject: ";
+// $Body .= $msg_subject;
+// $Body .= "\n";
+// $Body .= "Message: ";
+// $Body .= $message;
+// $Body .= "\n";
 
 // send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+// $success = mail($EmailTo, $Subject, $Body, "From:".$email);
+$success = "success" // mail($EmailTo, $Subject, $Body, "From:".$email);
 
 // redirect to success page
 if ($success && $errorMSG == ""){
